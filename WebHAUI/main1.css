@@ -1,0 +1,31 @@
+h1{
+    background-color: aqua;
+    border: 3px solid orangered;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+
+body{
+    background-color: lightslategray;
+    color: whitesmoke;
+    font-size: 20px;
+}
+p{
+    text-align: justify;
+}
+
+h2{
+    text-align: center;
+    background-color: lightgreen;
+    border-radius: 5px;
+    color: red;
+}
+
+h3{
+    text-decoration: underline;
+    color: black;
+    font-size: 25px;
+}
+
+

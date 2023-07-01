@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Đăng nhập</title>
+  <style>
+
+    #loginForm{
+      margin: 100px auto;
+      width: 300px;
+      height: 300px;
+      padding: 20px;
+      border: 1px solid grey;
+      border-radius: 10px;
+      text-align: center;
+    
+      
+    }
+
+    h2{
+      color: lightblue;
+      font-family: sans-serif;
+
+    }
+
+    #loginForm input{
+      width: 200px;
+      height: 40px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: 1px solid grey;
+      padding-left: 20px;
+    }
+
+    #loginForm button{
+      width: 220px;
+      height: 40px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border: none;
+      background-color: #45a049;
+      color: white;
+    }
+
+    #loginForm button:hover{
+      font-size: 15px;
+    }
+
+    #errorMessage {
+      color: red;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="loginForm">
+    <h2>Đăng nhập</h2>
+    <input type="text" id="nameInput" placeholder="Tên"><br>
+    <input type="number" id="ageInput" placeholder="Tuổi"><br>
+    <button onclick="checkAge()">Đăng nhập</button>
+    <div id="errorMessage"></div>
+  </div>
+
+  <script>
+    function checkAge() {
+      var name = document.getElementById("nameInput").value;
+      var age = document.getElementById("ageInput").value;
+
+      if (age < 18) {
+        document.getElementById("errorMessage").innerHTML = "Bạn phải đủ 18 tuổi trở lên để đăng nhập.";
+      } else {
+        window.location.href = "indexx.html";
+      }
+    }
+    
+  </script>
+
+<script language="JavaScript">
+  function DoiMau() {
+  document.bgColor = frm.Mau.value;
+  // Hoặc viết: window.document.bgColor = frm.Mau.value;
+  }
+</script>
+  Bạn hãy chọn màu nền:
+  <form name="frm">
+  <select name="Mau" onchange="DoiMau();" >
+  <option value="red">Màu đỏ</option>
+  <option value="white">Nguyên bản</option>
+  <option value="brown">Màu nâu</option>
+  <option value="lavender">Màu xanh nhạt</option>
+  </select> </form>
+</body>
+</html>

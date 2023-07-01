@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Giải phương trình bậc hai</title>
+</style>
+<style type="text/css">
+    #baoquanh {
+        background:#C9F;
+        margin : 10px auto;
+        width:960;
+    }
+
+    table{
+        text-align: center;
+        margin: 100px auto;
+    }
+    #menu {
+        background:#30FF00;
+        overflow:hidden;
+        padding:5px;
+    }
+    #menu li {
+        display: inline;
+    }
+    #menu li a{
+        padding: 5px;
+        text-decoration:none;
+        color:#191919;
+        font-weight:bold;
+    }
+    #menu li a:hover {
+        background:#FE00D0;
+        color:white;
+        text-decoration: none;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+    }
+    #nội dung{
+        font-size:1.2en;
+        margin:15px 0px;
+        overflow:hidden;
+    }
+    #phuongtrinh{
+        background:#CCF;
+        margin:auto 10px 50px auto;
+
+
+
+    }
+</style>
+<script type="text/javascript">
+    function GiaiPT()
+    {
+        kq.innerText=" ";
+        if(isNaN(hesoA.value) || isNaN(hesoB.value)|| hesoA.value=="" || hesoB.value=="")
+            kq.innerText="Lỗi nhập liệu chưa đúng !";
+        else if(hesoA.value==0|| hesoB.value==0 || hesoC.value==0)
+            kq.innerText="Phương Trình Vô Số Nghiệm";
+        else
+        {
+            var A=parseFloat(hesoA.value);
+            var B=parseFloat(hesoB.value);
+            var C=parseFloat(hesoC.value);
+            var del=B*B-(4*A*C);
+        if(del<0)
+            kq.innerText="Phương trình vô nghiệm";
+        if(del==0)
+        {
+            var x=-B/(2*A);
+            kq.innerText="Phương trình có nghiệm kép"+x;
+        }
+        if(del>0)
+        {
+            var x1 = (-B + (Math.sqrt(del))/2*A);
+            var x2 = (-B - (Math.sqrt(del))/2*A);
+            kq.innerText="phương trình có 2 nghiệm phân biệt X1 = " + x1 + " và x2 = " + x2;
+        }
+
+
+        }
+    
+
+    }
+
+
+</script>
+</head>
+
+<body bgcolor="#00FF33"><table width="404" height="168" border="1" bgcolor="#FF9900">
+    <div id="bao quanh">
+
+        <div id="menu">
+
+        <ul>
+        <li><a href="indexx.html"> Trang chủ </a></li>
+        <li><a href=""> Giới thiệu </a></li>
+        <li><a href=""> Học Tập </a></li>
+        <li><a href=""> Liên hệ </a></li>
+        <li><a href="login.html"> Form Đăng Nhập </a></li>
+        </ul>
+        </div><!--End menu-->
+
+        <div id=phuongtrinh>
+        <caption>
+            GIẢI PHƯƠNG TRÌNH BẬC HAI
+        </caption>
+        <tr>
+            <td width="190"><blockquote>
+
+            <p align="left">Nhập hệ số A:</p>
+            </blockquote></td>
+            <td width="198"><input name="hesoA" type="text" id="hesoA" value=""></td>
+        </tr>
+        <tr>
+            <td><blockquote>
+
+            <p align="left">Nhập hệ số B:</p>
+            </blockquote></td>
+            <td><input name="hesoB" type="text" id="hesoB" value=""></td>
+        </tr>
+        <tr>
+            <td width="190"><blockquote>
+
+            <p align="left">Nhập hệ số C:</p>
+            </blockquote></td>
+            <td width="198"><input name="hesoC" type="text" id="hesoC" value=""></td>
+        </tr>
+        <tr>
+            <td colspan="2"><div align="center">
+
+            <input name="Button" type="button" onClick="GiaiPT()" value="Giải phương trình">
+            </div></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center" bgcolor="#00FFFF" id="kq">&nbsp;</td>
+        </tr>
+        </table>
+        </div><!---And phuongtrinh--->
+
+
+    </div ><!-- end bao quanh -->
+</body>
+</html>
